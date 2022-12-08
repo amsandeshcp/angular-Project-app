@@ -11,7 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-
+import { AuthInterceptor} from './_helpers/auth.interceptor'
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
