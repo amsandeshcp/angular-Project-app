@@ -26,7 +26,9 @@ import { AuthInterceptor} from './_helpers/auth.interceptor'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [AuthInterceptor],
   bootstrap: [AppComponent]
