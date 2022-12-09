@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-import { AuthInterceptor} from './_helpers/auth.interceptor'
+import { AuthInterceptor } from './_helpers/auth.interceptor';
+import { LoginComponent } from './login/login.component'
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AuthInterceptor} from './_helpers/auth.interceptor'
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

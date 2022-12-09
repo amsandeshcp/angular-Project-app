@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private authSer: AuthService, private tokenStorage: TokenStorageService) { }
 
+
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
@@ -27,7 +28,6 @@ export class LoginComponent implements OnInit {
       this.roles = this.tokenStorage.getUser().roles;
     }
   }
-
   onSubmit(): void {
     const { username, password } = this.form;
     this.authSer.login(username, password).subscribe({
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-  reload() :void{
+  reload(): void {
     window.location.reload();
   }
 }
