@@ -11,7 +11,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getPublicBoard(): Observable<any> {
+  getPublicContent(): Observable<any> {
     return this.http.get(API_URL + 'all', { headers, responseType: 'text' });
   }
   getUserBoard(): Observable<any> {
